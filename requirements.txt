@@ -1,0 +1,30 @@
+# Core
+pandas
+numpy
+scikit-learn
+openpyxl
+tqdm
+matplotlib
+
+# QLoRA fine-tuning (notebooks/1_fine_tuning) - versions used in the experiments
+torch==2.2.2
+transformers==4.40.0
+datasets==2.18.0
+accelerate==0.29.3
+evaluate==0.4.1
+bitsandbytes==0.43.1
+huggingface_hub==0.22.2
+trl==0.8.6
+peft==0.10.0
+tensorboard
+
+# Prompt tuning (notebooks/2_prompt_tuning)
+openprompt
+tensorboardX
+yacs
+dill
+
+# Prompt engineering (notebooks/3_prompt_engineering)
+openai==1.55.3
+tiktoken
+tabulate

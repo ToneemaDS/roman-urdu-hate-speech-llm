@@ -1,0 +1,12 @@
+approach,method,model,configuration,accuracy,macro_precision,macro_recall,macro_f1,train_runtime
+Fine-tuning,QLoRA,Mistral-7B-v0.3,2 epochs,0.9642,0.9383,0.9392,0.9387,7:23:15
+Fine-tuning,QLoRA,Llama-3-8B,2 epochs,0.9640,0.9407,0.9353,0.9379,6:57:43
+Fine-tuning,QLoRA,Falcon-7B,2 epochs,0.9529,0.9252,0.9112,0.9180,6:38:34
+Fine-tuning,QLoRA,Gemma-2B,2 epochs,0.9463,0.9052,0.9129,0.9089,2:00:52
+Fine-tuning,QLoRA,mBERT uncased,2 epochs,0.8945,0.8184,0.8222,0.8203,0:25:07
+Fine-tuning,QLoRA,DeepSeek-R1-Distill-Qwen-7B,2 epochs,0.8355,0.7278,0.7773,0.7468,4:20:45
+Prompt engineering,Few-shot,GPT (Azure OpenAI),curated examples,0.9100,0.8279,0.8989,0.8565,
+Prompt engineering,Zero-shot,GPT (Azure OpenAI),system prompt only,0.7229,0.6799,0.8129,0.6699,
+Prompt tuning,Prefix prompt,mBERT cased,K=256 per class,0.8274,0.7087,0.7255,0.7164,
+Prompt tuning,Soft prompt,mBERT cased,K=128 per class,0.7498,0.6774,0.7810,0.6852,
+Prompt tuning,Cloze prompt,mBERT cased,K=64 per class,0.6842,0.6256,0.7049,0.6167,

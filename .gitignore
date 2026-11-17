@@ -1,0 +1,26 @@
+# Data and model outputs (not committed)
+data/*.xlsx
+data/*.csv
+outputs/
+saved_model*/
+checkpoints/
+*.pth
+*.bin
+*.safetensors
+wandb/
+logs/
+runs/
+
+# Secrets
+.env
+config.json
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS
+.DS_Store
