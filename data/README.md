@@ -1,6 +1,6 @@
 # Data
 
-The dataset is not included in this repository. Place the files here before running the notebooks:
+The dataset was provided by Dr. Hafiz Hassaan Saeed for this research. It is not publicly available, so it is not included in this repository. Place the files here before running the notebooks:
 
 | File | Used by | Contents |
 |---|---|---|

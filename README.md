@@ -6,7 +6,7 @@ Code for my M.S. Data Science thesis at the Information Technology University (I
 
 1. **QLoRA fine-tuning** of six open models: Llama 3 8B, Mistral 7B, Falcon 7B, Gemma 2B, DeepSeek-R1-Distill-Qwen 7B and multilingual BERT.
 2. **Prompt tuning** (soft, prefix and cloze prompts) of multilingual BERT in few-shot settings with OpenPrompt.
-3. **Prompt engineering** of a GPT model on Azure OpenAI, comparing zero-shot and few-shot prompting.
+3. **Prompt engineering** of GPT-3.5 on Azure OpenAI, comparing zero-shot and few-shot prompting.
 
 ![Macro F1 by approach](results/figures/macro_f1_comparison.png)
 
@@ -14,7 +14,7 @@ Code for my M.S. Data Science thesis at the Information Technology University (I
 
 - **QLoRA fine-tuning gives the best results.** Mistral 7B v0.3 (93.9% macro F1, 96.4% accuracy) and Llama 3 8B (93.8% macro F1) lead, while training only small LoRA adapters on a 4-bit quantised model.
 - **Small models stay competitive.** Gemma 2B reaches 90.9% macro F1 in about a quarter of the training time of the 7–8B models.
-- **Few-shot prompting is a strong no-training option.** Adding curated examples to the GPT prompt raised macro F1 from 67.0% (zero-shot) to 85.7%.
+- **Few-shot prompting is a strong no-training option.** Adding curated examples to the GPT-3.5 prompt raised macro F1 from 67.0% (zero-shot) to 85.7%.
 - **Prompt tuning with very few labels is limited.** With 64–256 examples per class, mBERT prompt tuning reaches 62–72% macro F1, and results vary between random samples.
 - **A reasoning-distilled model underperformed.** DeepSeek-R1-Distill-Qwen 7B scored 74.7% macro F1, the lowest of the fine-tuned 7B models.
 
@@ -37,7 +37,7 @@ Test set: last 20% of the data (14,555 comments). 4-bit NF4 quantisation, LoRA r
 
 Before fine-tuning, every model scored 49–56% balanced accuracy, close to chance.
 
-### Prompt engineering (Azure OpenAI)
+### Prompt engineering (GPT-3.5 on Azure OpenAI)
 
 Evaluated over the full dataset at temperature 0.
 
@@ -101,6 +101,10 @@ If you use this work, please cite the IBCAST paper.
 ## Author
 
 **Toneema Zubair**, AI Engineer · [LinkedIn](https://www.linkedin.com/in/toneema-zubair-13937b255)
+
+## Acknowledgements
+
+The Roman Urdu dataset was provided by Dr. Hafiz Hassaan Saeed and is not publicly available, so it is not included in this repository.
 
 > **Content warning:** this project deals with hate speech. The dataset and some notebook cells contain offensive language.
 
