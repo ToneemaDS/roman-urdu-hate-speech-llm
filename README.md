@@ -24,7 +24,7 @@ Macro scores treat both classes equally, which matters here because only about 1
 
 ### QLoRA fine-tuning
 
-Test set: last 20% of the data (14,555 comments). 4-bit NF4 quantisation, LoRA r=16, alpha=8, 2 epochs, class-weighted loss.
+Test set: last 20% of the data (14,555 comments). 4-bit NF4 quantisation, LoRA r=16, alpha=8, 2 epochs, class-weighted loss. Trained on an NVIDIA A100 GPU.
 
 | Model | Accuracy | Macro precision | Macro recall | Macro F1 | Training time |
 |---|---|---|---|---|---|
@@ -84,7 +84,7 @@ cp .env.example .env   # add your Hugging Face token and Azure OpenAI details
 
 1. Put the dataset in `data/` (see [`data/README.md`](data/README.md)).
 2. Open any notebook in `notebooks/` and run it top to bottom. Models and checkpoints are saved to `outputs/`.
-3. The fine-tuning notebooks need a CUDA GPU with at least 16 GB of memory. Llama 3 and Gemma are gated models, so accept their licences on Hugging Face first.
+3. The fine-tuning notebooks need a CUDA GPU with at least 16 GB of memory (the experiments used an NVIDIA A100). Llama 3 and Gemma are gated models, so accept their licences on Hugging Face first.
 
 ## Tech stack
 
